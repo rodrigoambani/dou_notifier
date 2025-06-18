@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "DOU Notifier",
+  "version": "1.0",
+  "description": "Notifica sobre novas publicações no Diário Oficial da União com base em seus filtros.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://www.in.gov.br/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  }
+}
