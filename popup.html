@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configurações DOU Notifier</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 10px; width: 300px; }
+        h3 { margin-top: 0; }
+        input[type="text"], select { width: calc(100% - 20px); padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .org-item { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px dashed #eee; }
+        .org-item:last-child { border-bottom: none; }
+        .org-item button { background-color: #dc3545; padding: 5px 10px; font-size: 0.8em; }
+        .org-item button:hover { background-color: #c82333; }
+        #statusMessage { margin-top: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h3>DOU Notifier Configurações</h3>
+
+    <h4>Palavras-chave (separadas por vírgula):</h4>
+    <input type="text" id="keywordsInput" placeholder="Ex: licitação, contrato, aviso">
+    <button id="saveKeywordsBtn">Salvar Palavras-chave</button>
+
+    <h4>Organizações para Monitorar:</h4>
+    <select id="sectionSelect">
+        <option value="do1">Seção 1 (Atos Normativos)</option>
+        <option value="do2">Seção 2 (Atos de Pessoal)</option>
+        <option value="do3" selected>Seção 3 (Contratos, Editais e Avisos)</option>
+    </select>
+    <input type="text" id="mainOrgInput" placeholder="Organização Principal (Ex: Ministério da Educação)">
+    <input type="text" id="subOrgInput" placeholder="Organização Subordinada (Ex: Empresa Brasileira de Serviços Hospitalares)">
+    <button id="addOrgBtn">Adicionar Organização</button>
+    <div id="organizationsList"></div>
+
+    <hr>
+    <button id="manualCheckBtn">Verificar Agora</button>
+    <div id="statusMessage"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
